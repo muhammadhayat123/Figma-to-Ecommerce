@@ -211,14 +211,14 @@ function CheackOut() {
 
       {/* Favorites Section */}
       <div className='my-10'>
-        <h2 className="text-2xl font-semibold mb-6">Your Favorites</h2>
+        <h2 className="text-2xl font-semibold mb-6 text-center">Your Favorites</h2>
 
         {favorites.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {favorites.map((product) => (
               <div key={product.id} className="flex flex-col items-center bg-white shadow-md rounded-lg p-4 relative">
                 <Image
-                  src={`https://cdn.sanity.io/images/your_project_id/${product.image}`} // Adjust the image path
+                  src={product.image} // Adjust the image path
                   alt={product.name}
                   height={250}
                   width={500}

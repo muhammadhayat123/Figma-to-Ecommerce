@@ -7,7 +7,7 @@ import Navbar from './Navbar';
 
 function Hero() {
     return (
-        <div className="bg-[#fbebb5]  mx-auto  w-full">
+        <div className="bg-[#ecbd22]  mx-auto  w-full">
             <Navbar />
             <div className="flex flex-col  md:mx-36 justify-around md:flex-row max-w-screen-2xl  p-20">
                 {/* Text Content */}
@@ -21,7 +21,7 @@ function Hero() {
                 {/* Image Section */}
                 <div className="mt-6 md:mt-0">
                     <Image
-                        src="/hero.jpeg"
+                        src="/hh.jpg"
                         height={600}
                         width={600}
                         alt="A stylish rocket single seater"
@@ -37,11 +37,11 @@ function Hero() {
                             className=''
                             height={500}
                             width={500}
-                            src='/hero1.jpeg'
+                            src='/table1.jpg'
                         />
-                        <h3 className='text-3xl font-medium'>Side table</h3>
-                        <Link href='/'>
-                            <p className="text-xl mt-8 underline underline-offset-8 text-black-600 ">View More</p>
+                        <h3 className='text-3xl font-medium text-center'>Side table</h3>
+                        <Link href='/Shop'>
+                            <p className="text-xl mt-8 underline underline-offset-8 text-black-600 text-center ">View More</p>
                         </Link>
                     </div>
                     <div>
@@ -50,11 +50,11 @@ function Hero() {
                             className=''
                             height={500}
                             width={500}
-                            src='/hero2.jpeg'
+                            src='/single.jpg'
                         />
-                        <h3 className='text-3xl font-medium'>Side table</h3>
-                        <Link href='/'>
-                            <p className="text-xl mt-8 underline underline-offset-8 text-black-600 ">View More</p>
+                        <h3 className='text-3xl font-medium text-center'>Single seater sofa</h3>
+                        <Link href='/Shop'>
+                            <p className="text-xl mt-8 underline underline-offset-8 text-black-600 text-center ">View More</p>
                         </Link>
                     </div>
                 </div>
@@ -71,10 +71,10 @@ function Hero() {
                     <div className="flex flex-wrap justify-center md:justify-start  gap-6 ">
                         {/* Product Item */}
                         {[
-                            { src: '/hero3.jpeg', name: 'Trenton modular sofa_3', price: 'Rs. 25,000.00' },
-                            { src: '/hero4.jpeg', name: 'Granite dining table with dining chair', price: 'Rs. 25,000.00' },
-                            { src: '/hero5.jpeg', name: 'Outdoor bar table and stool', price: 'Rs. 25,000.00' },
-                            { src: '/hero6.jpeg', name: 'Plain console with teak', price: 'Rs. 25,000.00' },
+                            { src: '/251.jpg', name: 'Trenton modular sofa_3', price: 'Rs. 25,000.00' },
+                            { src: '/252.jpg', name: 'Granite dining table with dining chair', price: 'Rs. 25,000.00' },
+                            { src: '/253.jpg', name: 'Outdoor bar table and stool', price: 'Rs. 25,000.00' },
+                            { src: '/254.jpg', name: 'Plain console with teak', price: 'Rs. 25,000.00' },
                         ].map((item, index) => (
                             <div key={index} className="flex flex-col text-left mx-auto h-[300px] w-[350px] ">
                                 <Image
@@ -94,11 +94,11 @@ function Hero() {
                 </div>
 
             </div>
-            <div className="flex flex-col bg-[#fff9e5] justify-around md:flex-row max-w-screen-2xl  p-3">
+            <div className="flex flex-col bg-[#a2eb43] justify-around md:flex-row max-w-screen-2xl  p-3">
                 {/* Image Section */}
                 <div className="mt-6 md:mt-0 md:ml-10">
                     <Image
-                        src="/hero7.jpeg"
+                        src="/as.jpg"
                         height={900}
                         width={900}
                         alt="A stylish rocket single seater"
@@ -129,7 +129,7 @@ function Hero() {
                 <div className='flex gap-0 mx-10 flex-wrap justify-center'>
                     <div className='mx-auto text-center mb-10 sm:mb-5'>
                         <Image
-                            src="/hero8.jpeg"
+                            src="/v1.jpg"
                             height={450}
                             width={450}
                             alt="A stylish rocket single seater"
@@ -151,7 +151,7 @@ function Hero() {
 
                     <div className='mx-auto text-center mb-10 sm:mb-5'>
                         <Image
-                            src="/hero9.jpeg"
+                            src="/v2.jpg"
                             height={450}
                             width={450}
                             alt="A stylish rocket single seater"
@@ -173,7 +173,7 @@ function Hero() {
 
                     <div className='mx-auto text-center mb-10 sm:mb-5'>
                         <Image
-                            src="/hero10.jpeg"
+                            src="/v3.jpg"
                             height={450}
                             width={450}
                             alt="A stylish rocket single seater"

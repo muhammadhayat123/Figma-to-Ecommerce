@@ -43,9 +43,9 @@ function Blog() {
   <div className="mt-8 w-full lg:w-3/4 gap-6">
     {/* Single Blog Post */}
     {[
-      { image: "/p4.jpeg", title: "Going all-in with millennial design", category: "Crafts", date: "01 Jan 2023" },
-      { image: "/p3.jpeg", title: "Exploring new ways of decorating", category: "Design", date: "15 Mar 2023" },
-      { image: "/p6.jpeg", title: "Handmade pieces that took time to make", category: "Wood", date: "20 Sep 2023" },
+      { image: "/s1.jpg", title: "Going all-in with millennial design", category: "Crafts", date: "01 Jan 2023" },
+      { image: "/s2.jpg", title: "Exploring new ways of decorating", category: "Design", date: "15 Mar 2023" },
+      { image: "/s3.jpg", title: "Handmade pieces that took time to make", category: "Wood", date: "20 Sep 2023" },
     ].map((post, index) => (
       <div key={index} className="bg-white p-4 rounded-lg transition-shadow">
         <Image
@@ -110,11 +110,11 @@ function Blog() {
       <h3 className="text-xl font-bold mb-4">Recent Posts</h3>
       <div className="space-y-6">
         {[
-          { image: '/p2.jpeg', title: 'Going all-in with millennial design', date: '03 Aug 2022' },
-          { image: '/p5.jpeg', title: 'Exploring new ways of decorating', date: '03 Aug 2022' },
-          { image: '/p6.jpeg', title: 'Handmade pieces that took time to make', date: '03 Aug 2022' },
-          { image: '/p1.jpeg', title: 'Modern home in Milan', date: '03 Aug 2022' },
-          { image: '/p7.jpeg', title: 'Colorful office redesign', date: '03 Aug 2022' },
+          { image: '/111.jpg', title: 'Going all-in with millennial design', date: '03 Aug 2022' },
+          { image: '/222..jpg', title: 'Exploring new ways of decorating', date: '03 Aug 2022' },
+          { image: '/123.jpg', title: 'Handmade pieces that took time to make', date: '03 Aug 2022' },
+          { image: '/444.jpg', title: 'Modern home in Milan', date: '03 Aug 2022' },
+          { image: '/555.jpg', title: 'Colorful office redesign', date: '03 Aug 2022' },
         ].map((post, index) => (
           <div key={index} className="flex space-x-3">
             <Image src={post.image} height={100} width={100} alt="" />

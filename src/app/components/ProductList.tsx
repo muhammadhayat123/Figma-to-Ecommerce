@@ -63,16 +63,22 @@ const ProductList = ({ product }: { product: Product }) => {
   // Add or remove product from favorites
   const toggleFavorite = () => {
     let favorites = JSON.parse(localStorage.getItem("favorites") || "[]");
+  
     if (isFavorited) {
       // Remove product from favorites
       favorites = favorites.filter((fav: Product) => fav.id !== product.id);
     } else {
-      // Add product to favorites
-      favorites.push(product);
+      // Add product to favorites with full image URL
+      favorites.push({
+        ...product,
+        image: urlFor(product.image).url(), // Store full image URL
+      });
     }
+  
     localStorage.setItem("favorites", JSON.stringify(favorites));
     setIsFavorited(!isFavorited);
   };
+  
 
   return (
     <div>

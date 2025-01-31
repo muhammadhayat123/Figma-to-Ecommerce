@@ -42,39 +42,25 @@ const ProductPage = ({ product }: { product: Product }) => {
 
   const handleClick = (product: Product) => {
     const cart = JSON.parse(localStorage.getItem('cart') || '{}');
-    if (cart[product.name]) {
-      cart[product.name] = {
-        ...cart[product.name],
-        quantity: cart[product.name].quantity + 1,
+
+    const productWithFullImage = {
+      ...product,
+      image: urlFor(product.image).url(), // Generate the full URL for the image
+    };
+
+    if (cart[productWithFullImage.name]) {
+      cart[productWithFullImage.name] = {
+        ...cart[productWithFullImage.name],
+        quantity: cart[productWithFullImage.name].quantity + 1,
       };
     } else {
-      cart[product.name] = { ...product, quantity: 1 };
+      cart[productWithFullImage.name] = { ...productWithFullImage, quantity: 1 };
     }
-
-    localStorage.setItem('cart', JSON.stringify(cart));
+  
+    localStorage.setItem("cart", JSON.stringify(cart));
   };
 
 
-
-  
-  // const handleClick = (product: Product) => {
-  // const cart = JSON.parse(localStorage.getItem("cart") || '{}')
-
-  // if (cart[product.name]){
-  //   cart[product.name]={ ... cart[product.name], quantity:cart[product.name].quantity + 1}
-  // }else{
-  //   cart[product.name] = {...product, quantity:1};
-  // }
-  //  localStorage.setItem("cart", JSON.stringify(cart))
-  
-    
-  // }
-   
-
-  // const addToCart = (product: Product) => {
-  //   setCart((prevCart) => [...prevCart, product]);
-  //   alert(`${product.name} has been added to the cart!`);
-  // };
 
   return (
     <div className="min-h-screen bg-gradient-to-r from-gray-50 to-gray-100">
@@ -134,22 +120,7 @@ const ProductPage = ({ product }: { product: Product }) => {
         </div>
       </div>
 
-      {/* Cart 
-
-      {cart.length > 0 && (
-        <div className="fixed bottom-4 right-4 bg-white shadow-lg rounded-lg p-4">
-          <h2 className="font-bold text-lg">Cart</h2>
-          <ul className="mt-2">
-            {cart.map((item, index) => (
-              <li key={index} className="flex justify-between text-gray-800">
-                <span>{item.name}</span>
-                <span>${item.price}</span>
-              </li>
-            ))}
-          </ul>
-          <p className="mt-4 font-bold">Total: ${cart.reduce((total, item) => total + item.price, 0)}</p>
-        </div>
-      )} */}
+      
     </div>
   );
 };

@@ -9,7 +9,6 @@ interface Product {
   isFeaturedProduct: number;
   name: string;
   image: any;
-  sizes:string[];
-  quantity?:number;
-  
+  sizes: string[];
+  quantity?: number;
 }

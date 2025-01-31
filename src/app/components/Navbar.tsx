@@ -14,7 +14,7 @@ const Navbar = () => {
   const pathname = usePathname();
 
   return (
-    <nav className={pathname === '/Blog' ? 'bg-white border-b border-gray-300 p-4' : 'bg-[#FBEBB5] border-b border-gray-300 p-4'}>
+    <nav className={pathname === '/Blog' ? 'bg-white border-b border-gray-300 p-4' : 'bg-[#eee8d5] border-b border-gray-300 p-4'}>
       <div className="container mx-auto flex flex-wrap justify-between items-center px-4">
         {/* Logo or Placeholder */}
         <div className="flex items-center">
