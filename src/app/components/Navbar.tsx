@@ -8,6 +8,7 @@ import {
   HeartIcon,
   ShoppingCartIcon,
 } from "@heroicons/react/24/outline";
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,23 +19,19 @@ const Navbar = () => {
       <div className="container mx-auto flex flex-wrap justify-between items-center px-4">
         {/* Logo or Placeholder */}
         <div className="flex items-center">
-          <Link href="/Account" className="flex flex-col items-center text-gray-600 hover:text-blue-500">
-            <svg
-              xmlns="http://www.w3.org/2000/svg" 
-              className="w-6 h-6"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              
-              <circle cx="12" cy="7" r="4" />
-              <path d="M5.5 21a8.38 8.38 0 0 1 13 0" />
-            </svg>
-            <span className="text-sm">MYAccount</span>
-          </Link>
+        <SignedOut>
+            <SignInButton>
+            <button className="bg-black text-white px-4 py-1 rounded-lg hover:bg-blue-500 transition">
+  Sign In
+</button>
+            </SignInButton>
+          </SignedOut>
+          <SignedIn>
+          <div className="scale-125 ">
+  <UserButton />
+</div>
+
+          </SignedIn>
         </div>
 
         {/* Mobile menu button */}
